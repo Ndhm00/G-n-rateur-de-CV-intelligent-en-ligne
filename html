@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Generator</title>
+</head>
+<body>
+
+    <h1>Générateur de CV</h1>
+
+    <input id="name" placeholder="Ton nom">
+    <br><br>
+
+    <textarea id="experience" placeholder="Ton expérience"></textarea>
+    <br><br>
+
+    <button onclick="generateCV()">Générer CV</button>
+
+    <h2>Résultat :</h2>
+    <div id="result"></div>
+
+    <script>
+        function generateCV() {
+            let name = document.getElementById("name").value;
+            let exp = document.getElementById("experience").value;
+
+            document.getElementById("result").innerHTML =
+                "<h3>" + name + "</h3><p>" + exp + "</p>";
+        }
+    </script>
+
+</body>
+</html>
